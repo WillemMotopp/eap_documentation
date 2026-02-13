@@ -5,8 +5,8 @@
 
 | Item | Details |
 |------|---------|
-| **Version** | 1.0.0 |
-| **Last Updated** | 2026-01-29 |
+| **Version** | 1.0.1 |
+| **Last Updated** | 2026-02-13 |
 | **Author** | Willem de Vries |
 | **Status** | Active |
 | **Versioning** | Semantic Versioning (Major.Minor.Patch) |
@@ -21,6 +21,8 @@
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
 | 1.0.0 | 2026-01-29 | Willem de Vries | Initial documentation: VPS setup, SSH access, Nginx configuration, DNS setup, SSL/HTTPS with Let's Encrypt, firewall configuration, and decommissioning procedures |
+| 1.0.1 | 2026.02.13 | Willem de Vries | Added post-setup adding SSH keys allowing SSH access |
+
 
 [TOC]
 
@@ -67,15 +69,15 @@ You can start an SSH session with a specific key file using the `-i` option:
 ssh -i /path/to/your/private_key username@hostname
 ```
 
-For example:
+For our VPS servers:
 
 ```bash
-ssh -i ~/.ssh/my_special_key ubuntu@37.97.201.75
+ssh -i ~/.ssh/my_special_key motopp@37.97.201.75
 ```
 
 **Some tips:**
 
-- The key file must have the correct permissions (only readable by you):
+- The private key file on the client must have the correct permissions (only readable by you):
   ```bash
   chmod 600 ~/.ssh/your_private_key
   ```
@@ -93,6 +95,19 @@ ssh -i ~/.ssh/my_special_key ubuntu@37.97.201.75
   ```bash
   ssh -i ~/.ssh/key1 -i ~/.ssh/key2 user@host
   ```
+
+## Adding SSH keys after setup of the VPS is completed
+
+This is a two-layered approach (I think)
+
+- Enter the public key in the TransIP console for the specific server
+
+- Enter the public key in authorized_keys on the server with the following command:
+
+```bash
+nano ~/.ssh/authorized_keys
+```
+
 
 ## Resolving SSH Host Key Problem
 
@@ -127,7 +142,7 @@ Open `C:\Users\WillemdeVries\.ssh\known_hosts` in a text editor and delete line 
 **Afterwards:**
 Try logging in again:
 ```bash
-ssh username@37.97.201.75
+ssh motopp@37.97.201.75
 ```
 
 You will now get a question whether you want to accept the new fingerprint:
