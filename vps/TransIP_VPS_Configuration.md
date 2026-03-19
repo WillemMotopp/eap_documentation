@@ -22,6 +22,8 @@
 |---------|------|--------|---------|
 | 1.0.0 | 2026-01-29 | Willem de Vries | Initial documentation: VPS setup, SSH access, Nginx configuration, DNS setup, SSL/HTTPS with Let's Encrypt, firewall configuration, and decommissioning procedures |
 | 1.0.1 | 2026.02.13 | Willem de Vries | Added post-setup adding SSH keys allowing SSH access |
+| 1.0.2 | 2026.03.11 | Willem de Vries | Added change password when locked out |
+| 1.0.3 | 2026.03.13 | Willem de Vries | Added hostnamectl |
 
 
 [TOC]
@@ -30,9 +32,28 @@
 
 - **Provider:** TransIP
 - **Operating System:** Ubuntu 24.04
-- **IP Address:** 37.97.201.75
-- **Main User:** Configured during installation (name provided)
-- **Authentication:** SSH key authentication configured during VPS initialization (no password set)
+- **IP Address:** <<host-ip-address>>
+- **Main User:** Configured during installation (name provided: motopp)
+- **Authentication:** SSH key authentication configured during VPS initialization (no password set) [Use Rescue mode to set it (see below)]
+- for more details, use command hostnamectl (see below)
+
+
+
+## Changing the hostname
+
+The default hostname for a TransIP VPS is cloud. This shows in every prompt:
+```
+motopp@cloud:~$
+```
+Use hostnamectl to change the name to match the server name (effective in new terminal session):
+```
+motopp@cloud:~$ sudo hostnamectl set-hostname <<your-hostname>>
+```
+Use hostnamectl to immediately check the hostname:
+```
+motopp@cloud:~$ sudo hostnamectl
+```
+
 
 ## VPS Access
 
@@ -156,6 +177,10 @@ Type `yes` and press Enter.
 
 **Note:** This error message can also be a sign of a "man-in-the-middle" attack, but in this case it is most likely simply because TransIP performed a new Ubuntu installation.
 
+## Changing the user password after lockout
+
+Follow the directions in [this article](https://www.transip.nl/knowledgebase/3782-je-root-wachtwoord-resetten-ubuntu-debian/) to start the VPS in rescue mode. Don't change the root password, but change the password of user motopp instead. The convention is to use the streetname in lowercase.
+
 ## System Updates
 
 ### APT Update and Upgrade
@@ -237,7 +262,7 @@ sudo ufw allow 443/tcp   # HTTPS
 ```
 
 **4. Test in your browser:**
-Go to `http://37.97.201.75` - you should see the default Nginx welcome page.
+Go to `http://<<vps-ip-address>>` - you should see the default Nginx welcome page.
 
 **5. Important locations:**
 - Config: `/etc/nginx/nginx.conf`
