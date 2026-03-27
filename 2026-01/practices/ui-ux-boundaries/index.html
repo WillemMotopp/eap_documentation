@@ -1,0 +1,4169 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://willemmotopp.github.io/eap-docs/2026-01/practices/ui-ux-boundaries/">
+      
+      
+        <link rel="prev" href="../../scrum/definitions/definition-of-done/">
+      
+      
+        <link rel="next" href="../git-workflow/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>UI/UX Boundaries - EAP Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wie-doet-wat-bij-uiux-beslissingen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="EAP Documentation" class="md-header__button md-logo" aria-label="EAP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EAP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UI/UX Boundaries
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/WillemMotopp/eap_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    WillemMotopp/eap_documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/onboarding-overview/" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../roles/product-owner/overview/" class="md-tabs__link">
+          
+  
+  
+  Role Guides
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scrum/events/sprint-planning/" class="md-tabs__link">
+          
+  
+  
+  Scrum Framework
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Best Practices
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../infrastructure/vps-configuration/" class="md-tabs__link">
+          
+  
+  
+  Infrastructure
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="EAP Documentation" class="md-nav__button md-logo" aria-label="EAP Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    EAP Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/WillemMotopp/eap_documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    WillemMotopp/eap_documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/onboarding-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Role Guides
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Role Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Product Owner
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Product Owner
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/product-owner/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/product-owner/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/product-owner/good-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/product-owner/anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/product-owner/challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/product-owner/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrum Master
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scrum Master
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/scrum-master/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/scrum-master/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/scrum-master/good-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/scrum-master/anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/scrum-master/challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/scrum-master/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tester/QA
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tester/QA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/tester/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/tester/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/tester/good-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/tester/anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/tester/challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/tester/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/developer/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/developer/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/developer/good-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/developer/anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/developer/challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/developer/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DevOps Engineer
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DevOps Engineer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/devops/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/devops/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tasks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/devops/good-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Good Practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/devops/anti-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anti-Patterns
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/devops/challenges/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Challenges
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../roles/devops/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scrum Framework
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Scrum Framework
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/events/sprint-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/events/daily-scrum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Scrum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/events/sprint-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/events/sprint-retrospective/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sprint Retrospective
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/events/backlog-refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backlog Refinement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/definitions/definition-of-ready/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definition of Ready
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scrum/definitions/definition-of-done/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Definition of Done
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Best Practices
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Best Practices
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX Boundaries
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI/UX Boundaries
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#situatie-itnl02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Situatie ITNL02
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernprincipe-wat-vs-hoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kernprincipe: WAT vs HOE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kernprincipe: WAT vs HOE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-owner-bepaalt-wat-en-waarom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Owner Bepaalt: WAT en WAAROM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#team-bepaalt-hoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Team Bepaalt: HOE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#product-owner-verantwoordelijkheden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Owner Verantwoordelijkheden
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Product Owner Verantwoordelijkheden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-functionele-requirements-wat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Functionele Requirements (WAT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-user-experience-requirements-gebruikersbehoefte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. User Experience Requirements (Gebruikersbehoefte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-business-rules-validaties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Business Rules &amp; Validaties
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wat-product-owner-niet-bepaalt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wat Product Owner NIET Bepaalt
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wat Product Owner NIET Bepaalt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-layout-hoe-het-eruitziet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Design &amp; Layout (HOE het eruitziet)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technische-implementatie-hoe-het-werkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technische Implementatie (HOE het werkt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#andere-rollen-bij-pagina-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Andere Rollen Bij Pagina Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Andere Rollen Bij Pagina Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frontend-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frontend Developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scrum-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scrum Master
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hoe-dit-in-praktijk-werkt-vanaf-sprint-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hoe Dit in Praktijk Werkt (Vanaf Sprint 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hoe Dit in Praktijk Werkt (Vanaf Sprint 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stap-1-product-owner-schrijft-user-story-met-acceptance-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stap 1: Product Owner Schrijft User Story met Acceptance Criteria
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-2-team-refinement-sessie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stap 2: Team Refinement Sessie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-3-frontend-developer-maakt-wireframeschets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stap 3: Frontend Developer Maakt Wireframe/Schets
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-4-tijdens-ontwikkeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stap 4: Tijdens Ontwikkeling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stap-5-testing-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stap 5: Testing &amp; Feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#veel-voorkomende-problemen-oplossingen-sprint-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Veel Voorkomende Problemen &amp; Oplossingen (Sprint 2+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Veel Voorkomende Problemen &amp; Oplossingen (Sprint 2+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probleem-1-product-owner-specificeert-design-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem 1: Product Owner Specificeert Design Details
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probleem-2-niemand-neemt-design-verantwoordelijkheid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem 2: Niemand Neemt Design Verantwoordelijkheid
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probleem-3-te-vage-user-stories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem 3: Te Vage User Stories
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#probleem-4-product-owner-geeft-tegenstrijdige-feedback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Probleem 4: Product Owner Geeft Tegenstrijdige Feedback
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acties-voor-itnl02-team-sprint-2-en-verder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acties voor ITNL02 Team (Sprint 2 en verder)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acties voor ITNL02 Team (Sprint 2 en verder)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voor-product-owner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Product Owner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-frontend-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Frontend Developer(s)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-backend-developers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Backend Developer(s)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Tester
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-scrum-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Scrum Master
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-2-planning-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 2 Planning Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sprint 2 Planning Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voor-product-owner-voor-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Product Owner (Voor Planning):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-frontend-developer-in-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Frontend Developer (In Planning):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-backend-developer-in-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Backend Developer (In Planning):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-tester-in-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Tester (In Planning):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voor-scrum-master-in-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voor Scrum Master (In Planning):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voorbeeld-dialogen-sprint-2-en-verder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld Dialogen (Sprint 2 en verder)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Voorbeeld Dialogen (Sprint 2 en verder)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-1-functionele-vraag-goed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld 1: Functionele Vraag (GOED)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-2-design-vraag-fout-gecorrigeerd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld 2: Design Vraag (FOUT → GECORRIGEERD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-3-wireframe-review-goed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld 3: Wireframe Review (GOED)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voorbeeld-4-acceptance-criteria-onduidelijk-gecorrigeerd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voorbeeld 4: Acceptance Criteria Onduidelijk (GECORRIGEERD)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#samenvatting-wat-vs-hoe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Samenvatting: WAT vs HOE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Samenvatting: WAT vs HOE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#product-owner-bepaalt-wat-waarom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Product Owner Bepaalt (WAT &amp; WAAROM):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frontend-developer-bepaalt-hoe-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Frontend Developer Bepaalt (HOE - Design):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backend-developer-bepaalt-hoe-techniek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Backend Developer Bepaalt (HOE - Techniek):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tester-bepaalt-hoe-kwaliteit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Tester Bepaalt (HOE - Kwaliteit):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sprint-2-succesindicatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sprint 2 Succesindicatoren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vragen-contact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vragen &amp; Contact
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code-review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing-strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Infrastructure
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Infrastructure
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/vps-configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VPS Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../infrastructure/deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="wie-doet-wat-bij-uiux-beslissingen">Wie doet Wat bij UI/UX Beslissingen</h1>
+<p><strong>Versie:</strong> 1.0<br />
+<strong>Datum:</strong> 2026-03-19<br />
+<strong>Doelgroep:</strong> ITNL02 Team (en andere EAP cohorten)<br />
+<strong>Context:</strong> Sprint 1 loopt vandaag af, dit document geldt voor Sprint 2 en verder<br />
+<strong>Doel:</strong> Verduidelijking wie wat bepaalt bij pagina design en functionaliteit</p>
+<hr />
+<h2 id="situatie-itnl02">Situatie ITNL02</h2>
+<p>In Sprint 1 is er veel onduidelijkheid ontstaan over hoe pagina's eruit moeten zien, zowel qua functionaliteit als qua design. Dit document verduidelijkt de rolverdeling tussen Product Owner en andere teamleden.</p>
+<p><strong>Vanaf Sprint 2</strong> geldt deze verduidelijking voor alle nieuwe stories en pagina's.</p>
+<hr />
+<h2 id="kernprincipe-wat-vs-hoe">Kernprincipe: WAT vs HOE</h2>
+<h3 id="product-owner-bepaalt-wat-en-waarom">Product Owner Bepaalt: <strong>WAT</strong> en <strong>WAAROM</strong></h3>
+<p><strong>WAT</strong> = Functionaliteit, inhoud, gebruikersdoel, business rules<br />
+<strong>WAAROM</strong> = Waarde voor gebruiker, business rationale</p>
+<h3 id="team-bepaalt-hoe">Team Bepaalt: <strong>HOE</strong></h3>
+<p><strong>HOE</strong> = Design, layout, technische implementatie, user interface details</p>
+<hr />
+<h2 id="product-owner-verantwoordelijkheden">Product Owner Verantwoordelijkheden</h2>
+<h3 id="1-functionele-requirements-wat">1. Functionele Requirements (WAT)</h3>
+<p><strong>Product Owner bepaalt:</strong></p>
+<ul>
+<li>Welke informatie moet de pagina tonen?</li>
+<li>Welke acties moet een gebruiker kunnen uitvoeren?</li>
+<li>Welke data moet worden ingevoerd/opgeslagen?</li>
+<li>Wat is het doel van de pagina voor de gebruiker?</li>
+</ul>
+<p><strong>Voorbeeld - Verlofaanvraag Pagina:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ PO bepaalt:
+- &quot;Pagina moet velden hebben voor: startdatum, einddatum, type verlof, reden&quot;
+- &quot;Gebruiker moet aanvraag kunnen versturen&quot;
+- &quot;Na versturen ziet gebruiker bevestiging met aanvraag details&quot;
+- &quot;Gebruiker moet zijn eerdere aanvragen kunnen zien&quot;
+- &quot;Status van aanvraag moet zichtbaar zijn (In behandeling/Goedgekeurd/Afgekeurd)&quot;
+</code></pre></div>
+<p><strong>Wat PO NIET bepaalt:</strong>
+<div class="highlight"><pre><span></span><code>❌ PO bepaalt NIET:
+- Of formulier links of rechts staat
+- Welke kleur de verstuur-knop heeft
+- Exact formaat van datumvelden
+- Welke font wordt gebruikt
+- Pixel-afmetingen van elementen
+</code></pre></div></p>
+<h3 id="2-user-experience-requirements-gebruikersbehoefte">2. User Experience Requirements (Gebruikersbehoefte)</h3>
+<p><strong>Product Owner bepaalt:</strong></p>
+<ul>
+<li>Wat moet logisch/intuïtief zijn voor gebruikers?</li>
+<li>Welke informatie is het belangrijkst (prioriteit)?</li>
+<li>Wat zou gebruikers frustreren of verwarren?</li>
+<li>Welke flow moet een gebruiker doorlopen?</li>
+</ul>
+<p><strong>Voorbeeld:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ PO bepaalt:
+- &quot;Foutmeldingen moeten duidelijk zijn - gebruiker moet begrijpen wat er fout is&quot;
+- &quot;Gebruiker moet direct zien of aanvraag in behandeling is of goedgekeurd&quot;
+- &quot;Datum selectie moet simpel zijn - liefst geen handmatig typen van datums&quot;
+- &quot;Belangrijkste actie (Indienen) moet prominent aanwezig zijn&quot;
+- &quot;Gebruiker moet kunnen annuleren zonder data te verliezen&quot;
+</code></pre></div>
+<p><strong>Wat PO NIET bepaalt:</strong>
+<div class="highlight"><pre><span></span><code>❌ PO bepaalt NIET:
+- Exacte positionering van foutmeldingen
+- Specifieke kleur voor statusweergave
+- Welke datum picker component gebruikt wordt
+- Of annuleren-knop links of rechts van indienen-knop staat
+</code></pre></div></p>
+<h3 id="3-business-rules-validaties">3. Business Rules &amp; Validaties</h3>
+<p><strong>Product Owner bepaalt:</strong></p>
+<ul>
+<li>Validatieregels voor data</li>
+<li>Toegangsrechten en autorisatie</li>
+<li>Workflow logica</li>
+<li>GDPR vereisten</li>
+</ul>
+<p><strong>Voorbeeld:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ PO bepaalt:
+- &quot;Einddatum moet na startdatum liggen&quot;
+- &quot;Gebruiker kan alleen eigen aanvragen zien, niet die van anderen&quot;
+- &quot;Aanvraag moet naar manager gestuurd worden voor goedkeuring&quot;
+- &quot;Type verlof is verplicht, reden is optioneel&quot;
+- &quot;Minimale aanvraag is 1 dag, maximale aanvraag is 30 dagen&quot;
+- &quot;Gebruiker kan geen aanvraag indienen voor datums in het verleden&quot;
+</code></pre></div>
+<p><strong>Wat PO NIET bepaalt:</strong>
+<div class="highlight"><pre><span></span><code>❌ PO bepaalt NIET:
+- Hoe validatie technisch geïmplementeerd wordt (client-side/server-side)
+- Welke error messages framework gebruikt wordt
+- Hoe database queries gestructureerd zijn
+- Welke API endpoints gebruikt worden
+</code></pre></div></p>
+<hr />
+<h2 id="wat-product-owner-niet-bepaalt">Wat Product Owner NIET Bepaalt</h2>
+<h3 id="design-layout-hoe-het-eruitziet">Design &amp; Layout (HOE het eruitziet)</h3>
+<p><strong>Dit is NIET Product Owner verantwoordelijkheid:</strong></p>
+<ul>
+<li>❌ Exacte kleuren, fonts, font sizes, spacing</li>
+<li>❌ Waar precies elk element staat (links/rechts/midden/boven/onder)</li>
+<li>❌ Pixel-perfecte layouts en afmetingen</li>
+<li>❌ Animaties, transitions, hover states, focus states</li>
+<li>❌ Specifieke CSS styling</li>
+<li>❌ Welke UI components/libraries gebruikt worden</li>
+<li>❌ Responsive breakpoints (wanneer mobile vs desktop layout)</li>
+<li>❌ Icon keuzes (welk icoon voor welke actie)</li>
+</ul>
+<p><strong>Dit is verantwoordelijkheid van: Frontend Developer</strong></p>
+<h3 id="technische-implementatie-hoe-het-werkt">Technische Implementatie (HOE het werkt)</h3>
+<p><strong>Dit is NIET Product Owner verantwoordelijkheid:</strong></p>
+<ul>
+<li>❌ Welke API endpoints gebruikt worden</li>
+<li>❌ Hoe data opgeslagen wordt in database (tabellen, velden, relaties)</li>
+<li>❌ Welke frontend framework/libraries gebruikt worden</li>
+<li>❌ Code structuur en architectuur</li>
+<li>❌ Performance optimalisaties</li>
+<li>❌ Caching strategieën</li>
+<li>❌ Error handling implementatie</li>
+<li>❌ Security implementatie details</li>
+</ul>
+<p><strong>Dit is verantwoordelijkheid van: Developers (Frontend/Backend/DevOps)</strong></p>
+<hr />
+<h2 id="andere-rollen-bij-pagina-design">Andere Rollen Bij Pagina Design</h2>
+<h3 id="frontend-developer">Frontend Developer</h3>
+<p><strong>Verantwoordelijk voor:</strong></p>
+<ul>
+<li>Visual design (kleuren, layout, styling)</li>
+<li>User interface (knoppen, formulieren, navigatie, inputs)</li>
+<li>Component selectie (welke UI library components)</li>
+<li>Responsive design (werkt op mobiel/tablet/desktop)</li>
+<li>Toegankelijkheid (keyboard navigatie, screen readers, ARIA labels)</li>
+<li>Micro-interacties (hover, focus, loading states)</li>
+</ul>
+<p><strong>Beslissingen die Frontend Developer maakt:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ Frontend Developer beslist:
+- &quot;Ik plaats het formulier links, aanvraag geschiedenis rechts&quot;
+- &quot;Ik gebruik Material UI date picker component voor datum selectie&quot;
+- &quot;Ik style knoppen in blauw (#0066CC) met witte tekst&quot;
+- &quot;Ik gebruik een tabel voor aanvraag geschiedenis&quot;
+- &quot;Ik plaats primary action rechts (Indienen), secondary action links (Annuleren)&quot;
+- &quot;Ik gebruik groen voor Goedgekeurd, rood voor Afgekeurd, geel voor In behandeling&quot;
+- &quot;Op mobiel toon ik formulier bovenaan, geschiedenis eronder&quot;
+</code></pre></div>
+<p><strong>Frontend Developer vraagt PO feedback op:</strong></p>
+<ul>
+<li>Is deze layout logisch voor gebruikers?</li>
+<li>Zijn belangrijkste elementen zichtbaar/prominent genoeg?</li>
+<li>Is de flow intuïtief?</li>
+<li>Begrijpen gebruikers wat ze moeten doen?</li>
+</ul>
+<h3 id="backend-developer">Backend Developer</h3>
+<p><strong>Verantwoordelijk voor:</strong></p>
+<ul>
+<li>API endpoints voor data ophalen/opslaan</li>
+<li>Business logica validatie (server-side)</li>
+<li>Database schema en queries</li>
+<li>GDPR compliance in data opslag en verwerking</li>
+<li>Security (authentication, authorization)</li>
+<li>Email verzending</li>
+<li>Integration met externe services</li>
+</ul>
+<p><strong>Beslissingen die Backend Developer maakt:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ Backend Developer beslist:
+- &quot;POST /api/leave-requests endpoint voor nieuwe aanvraag&quot;
+- &quot;GET /api/leave-requests?userId=X voor aanvraag geschiedenis&quot;
+- &quot;Ik valideer datums en business rules server-side&quot;
+- &quot;Ik sla aanvraag op in &#39;leave_requests&#39; tabel met foreign key naar &#39;users&#39;&quot;
+- &quot;Ik gebruik TransIP SMTP voor email verzending&quot;
+- &quot;Ik log alleen user_id, niet volledige user data in request tabel (privacy by design)&quot;
+</code></pre></div>
+<p><strong>Backend Developer vraagt PO:</strong></p>
+<ul>
+<li>Welke business rules moet ik valideren?</li>
+<li>Welke data moet opgeslagen worden?</li>
+<li>Welke GDPR vereisten gelden?</li>
+<li>Wie heeft toegang tot welke data?</li>
+</ul>
+<h3 id="tester">Tester</h3>
+<p><strong>Verantwoordelijk voor:</strong></p>
+<ul>
+<li>Valideren dat functionaliteit werkt zoals PO specificeerde</li>
+<li>Edge cases identificeren</li>
+<li>Usability feedback geven vanuit gebruikersperspectief</li>
+<li>GDPR compliance valideren</li>
+</ul>
+<p><strong>Input die Tester geeft:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ Tester feedback:
+- &quot;Foutmelding &#39;Invalid input&#39; is onduidelijk - gebruiker begrijpt niet wat fout is&quot;
+- &quot;Wat gebeurt er als gebruiker einddatum in het verleden invoert?&quot;
+- &quot;Submit knop werkt niet op mobiel (te klein om te klikken)&quot;
+- &quot;Gebruiker kan data van andere gebruikers zien in lijst (GDPR issue)&quot;
+</code></pre></div>
+<p><strong>Tester vraagt PO:</strong></p>
+<ul>
+<li>Is dit gedrag correct volgens acceptance criteria?</li>
+<li>Is deze foutmelding acceptabel of moet het duidelijker?</li>
+<li>Welke prioriteit heeft deze bug?</li>
+</ul>
+<h3 id="scrum-master">Scrum Master</h3>
+<p><strong>Verantwoordelijk voor:</strong></p>
+<ul>
+<li>Faciliteren van discussies over rollen en verantwoordelijkheden</li>
+<li>Helpen bij conflicten over wie wat beslist</li>
+<li>Waarborgen dat proces soepel loopt</li>
+</ul>
+<p><strong>Scrum Master ondersteunt:</strong></p>
+<ul>
+<li>PO bij verduidelijken van requirements</li>
+<li>Team bij vragen over proces</li>
+<li>Faciliteren van refinement en planning sessies</li>
+</ul>
+<hr />
+<h2 id="hoe-dit-in-praktijk-werkt-vanaf-sprint-2">Hoe Dit in Praktijk Werkt (Vanaf Sprint 2)</h2>
+<h3 id="stap-1-product-owner-schrijft-user-story-met-acceptance-criteria">Stap 1: Product Owner Schrijft User Story met Acceptance Criteria</h3>
+<p><strong>Voorbeeld Story:</strong></p>
+<div class="highlight"><pre><span></span><code>USER STORY: Verlofaanvraag Indienen
+
+Als een medewerker
+Wil ik een verlofaanvraag kunnen indienen via een webformulier
+Zodat ik verlof kan aanvragen zonder emails te sturen
+
+Acceptance Criteria:
+<span class="k">- [ ]</span> Formulier bevat verplichte velden: startdatum, einddatum, type verlof
+<span class="k">- [ ]</span> Formulier bevat optioneel veld: reden voor verlof
+<span class="k">- [ ]</span> Validatie: einddatum moet minimaal 1 dag na startdatum liggen
+<span class="k">- [ ]</span> Validatie: startdatum en einddatum mogen niet in het verleden liggen
+<span class="k">- [ ]</span> Validatie: maximale aanvraagperiode is 30 dagen
+<span class="k">- [ ]</span> Type verlof opties: Vakantie, Ziekte, Onbetaald, Overig
+<span class="k">- [ ]</span> Na succesvol indienen ziet gebruiker bevestigingsscherm met:
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Aanvraag details (datums, type, reden)
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Status &quot;In behandeling&quot;
+<span class="w">  </span><span class="k">-</span><span class="w"> </span>Bericht: &quot;Je aanvraag is verstuurd naar je manager&quot;
+<span class="k">- [ ]</span> Gebruiker ontvangt email bevestiging met aanvraag details
+<span class="k">- [ ]</span> Aanvraag verschijnt in &quot;Mijn Aanvragen&quot; lijst met status &quot;In behandeling&quot;
+<span class="k">- [ ]</span> Als validatie faalt, ziet gebruiker duidelijke foutmelding wat er fout is
+
+GDPR Overwegingen:
+<span class="k">-</span><span class="w"> </span>Persoonlijke data: gebruiker naam, email, verlof datums, reden
+<span class="k">-</span><span class="w"> </span>Juridische basis: Arbeidscontract (noodzakelijk voor uitvoering contract)
+<span class="k">-</span><span class="w"> </span>Privacy by design: Alleen medewerker en hun manager kunnen aanvraag zien
+<span class="k">-</span><span class="w"> </span>Data retentie: Aanvragen bewaren voor 7 jaar (wettelijke verplichting)
+
+Prioriteit: Hoog
+Schatting: [Team schat tijdens refinement]
+</code></pre></div>
+<p><strong>WAT Product Owner WEL specificeert:</strong>
+- Welke velden nodig zijn
+- Welke validaties gelden
+- Wat gebruiker ziet na versturen
+- Welke data opgeslagen/verstuurd wordt
+- GDPR vereisten</p>
+<p><strong>WAT Product Owner NIET specificeert:</strong>
+- Hoe formulier eruit ziet
+- Welke kleuren gebruikt worden
+- Waar elementen gepositioneerd zijn
+- Welke UI components gebruikt worden
+- Technische implementatie details</p>
+<hr />
+<h3 id="stap-2-team-refinement-sessie">Stap 2: Team Refinement Sessie</h3>
+<p><strong>Product Owner presenteert story:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Deze story gaat over het indienen van verlofaanvragen. Belangrijkste is dat medewerkers eenvoudig datums kunnen kiezen, type verlof aangeven, en optioneel een reden toevoegen. Na versturen moeten ze bevestiging zien dat het verstuurd is naar hun manager.</p>
+<p>Ik heb acceptance criteria geschreven met alle validaties en vereiste functionaliteit. Jullie kunnen zelf beslissen hoe de pagina eruit ziet - layout, kleuren, components. Maak wat logisch is.</p>
+<p>Vragen over de functionaliteit?"</p>
+</blockquote>
+<p><strong>Frontend Developer vraagt:</strong></p>
+<blockquote>
+<p><strong>Frontend Dev:</strong> "Hoe moet de pagina layout zijn? Formulier bovenaan, geschiedenis eronder? Of naast elkaar?"</p>
+</blockquote>
+<p><strong>❌ FOUT Product Owner Antwoord:</strong></p>
+<blockquote>
+<p>"Formulier moet links staan, 400px breed, geschiedenis rechts 600px breed, gebruik Material UI components, blauwe primary buttons, 16px Roboto font..."</p>
+</blockquote>
+<p><strong>Waarom fout:</strong>
+- PO dicteert design details
+- PO rolt in Frontend Developer rol
+- Team kan geen eigen beslissingen maken
+- Verspilt PO tijd aan details</p>
+<p><strong>✅ GOED Product Owner Antwoord:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Ik heb geen specifieke voorkeur voor layout. Belangrijkste is dat het duidelijk en simpel is voor gebruikers - ze moeten direct snappen wat ze moeten doen.</p>
+<p>Jullie zijn de experts in UI design. Maak een voorstel dat logisch is. Ik geef graag feedback op gebruiksvriendelijkheid - of het intuïtief genoeg is, of belangrijke dingen prominent genoeg zijn, dat soort zaken.</p>
+<p>Misschien kunnen jullie een wireframe schetsen voor we gaan bouwen? Dan kan ik feedback geven voordat jullie implementeren."</p>
+</blockquote>
+<p><strong>Waarom goed:</strong>
+- PO stelt grenzen (duidelijk en simpel)
+- PO geeft ownership aan team
+- PO biedt aan feedback te geven op UX, niet design details
+- PO vraagt om wireframe (goedkope manier om te valideren)</p>
+<p><strong>Frontend Developer:</strong></p>
+<blockquote>
+<p><strong>Frontend Dev:</strong> "Oké, helder. Ik maak een simpele layout: formulier bovenaan prominent, geschiedenis eronder in collapsible sectie. Gebruik ik Material UI date pickers voor consistentie met rest van applicatie. Ik schets het eerst, laat jullie zien voor ik ga bouwen."</p>
+</blockquote>
+<p><strong>Product Owner:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Klinkt goed! Laat maar zien zodra je schets hebt."</p>
+</blockquote>
+<p><strong>Backend Developer vraagt:</strong></p>
+<blockquote>
+<p><strong>Backend Dev:</strong> "Manager approval is out of scope voor deze story, toch? We slaan alleen op met status 'In behandeling'?"</p>
+</blockquote>
+<p><strong>Product Owner:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Correct. Manager approval is een aparte story voor later. Voor nu alleen opslaan en email naar manager sturen dat er een aanvraag is. Manager handelt het buiten systeem af."</p>
+</blockquote>
+<p><strong>Tester vraagt:</strong></p>
+<blockquote>
+<p><strong>Tester:</strong> "Ik zie validatie voor datums. Moet ik ook testen wat er gebeurt als gebruiker formulier twee keer snel achter elkaar verstuurt? Dubbele aanvragen?"</p>
+</blockquote>
+<p><strong>Product Owner:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Goed punt! Ja, we moeten voorkomen dat gebruiker per ongeluk dubbele aanvraag maakt. Voeg toe aan acceptance criteria: 'Submit knop disabled tijdens verzenden' en 'Duplicaat detectie: zelfde datums binnen 1 minuut niet toegestaan'."</p>
+</blockquote>
+<p><strong>Tester:</strong> "Perfect, dan test ik dat."</p>
+<p><strong>Team schat story:</strong> 13 punten</p>
+<hr />
+<h3 id="stap-3-frontend-developer-maakt-wireframeschets">Stap 3: Frontend Developer Maakt Wireframe/Schets</h3>
+<p><strong>Voor implementatie begint, maakt Frontend Developer een simpele wireframe.</strong></p>
+<p>Dit kan zijn:
+- Hand getekende schets
+- Simpel Figma/Excalidraw diagram
+- HTML prototype zonder styling
+- Beschrijving met ASCII art</p>
+<p><strong>Voorbeeld wireframe:</strong></p>
+<div class="highlight"><pre><span></span><code>┌─────────────────────────────────────────────┐
+│  Nieuwe Verlofaanvraag                      │
+│  ─────────────────────────────────────────  │
+│                                             │
+│  Startdatum *     [📅 01-04-2026]          │
+│  Einddatum *      [📅 05-04-2026]          │
+│                                             │
+│  Type verlof *    [Dropdown: Vakantie ▾]   │
+│                                             │
+│  Reden            [Text area - optioneel]  │
+│                   [500 tekens max       ]  │
+│                   [                     ]  │
+│                                             │
+│  [Annuleren]              [Indienen]       │
+│                                             │
+└─────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────┐
+│  ▼ Mijn Aanvragen (5)                       │
+│  ─────────────────────────────────────────  │
+│  ┌───────────────────────────────────────┐ │
+│  │ 📅 01-04 t/m 05-04 | Vakantie         │ │
+│  │ Status: 🟡 In behandeling             │ │
+│  │ Ingediend: 19-03-2026                 │ │
+│  └───────────────────────────────────────┘ │
+│  ┌───────────────────────────────────────┐ │
+│  │ 📅 15-03 t/m 16-03 | Ziekte           │ │
+│  │ Status: ✅ Goedgekeurd                │ │
+│  │ Ingediend: 15-03-2026                 │ │
+│  └───────────────────────────────────────┘ │
+└─────────────────────────────────────────────┘
+
+Design keuzes:
+- Material UI date picker voor datum selectie
+- Dropdown voor type verlof (standaard opties)
+- Text area voor reden (optioneel, max 500 chars)
+- Primary button rechts (Indienen), secondary links (Annuleren)
+- Geschiedenis collapsible (▼) zodat formulier prominent blijft
+- Status met emoji&#39;s: 🟡 In behandeling, ✅ Goedgekeurd, ❌ Afgekeurd
+- Responsive: op mobiel alles onder elkaar, formulier eerst
+</code></pre></div>
+<p><strong>Frontend Developer laat wireframe zien aan team en PO:</strong></p>
+<p><strong>In Daily Standup of korte sync:</strong></p>
+<blockquote>
+<p><strong>Frontend Dev:</strong> "Ik heb wireframe gemaakt voor verlofaanvraag pagina. Layout logisch? Iets wat ontbreekt uit acceptance criteria perspectief?"</p>
+</blockquote>
+<p><strong>Product Owner bekijkt en geeft feedback:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Ziet er goed uit! Paar observaties:</p>
+<p>✅ Goed: Formulier is prominent, helder wat verplicht is (*)
+✅ Goed: Status is duidelijk zichtbaar met emoji's
+✅ Goed: Geschiedenis is collapsible, houdt focus op nieuw formulier</p>
+<p>💡 Vraag: Status emoji's (🟡✅❌) zijn visueel duidelijk, maar zijn ze ook toegankelijk voor screen readers? Bijvoorbeeld colorblind gebruikers?</p>
+<p>💡 Suggestie: In geschiedenis sectie, kan 'Ingediend' datum helpen? Of is dat niet relevant voor gebruiker? Ik twijfel - jullie oordeel."</p>
+</blockquote>
+<p><strong>Frontend Developer:</strong></p>
+<blockquote>
+<p><strong>Frontend Dev:</strong> "Goede punten!</p>
+<ul>
+<li>Emoji's: Ik voeg tekst toe naast emoji's, dus: '🟡 In behandeling' niet alleen emoji. Dan werkt het voor screen readers en colorblind gebruikers.</li>
+<li>Ingediend datum: Handig voor traceren, ik houd het erin. Als we in testing merken dat het niet nuttig is, haal ik het weg.</li>
+</ul>
+<p>Verder nog feedback?"</p>
+</blockquote>
+<p><strong>Product Owner:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Nee, looks good! Go ahead met implementatie."</p>
+</blockquote>
+<p><strong>Waarom dit proces werkt:</strong>
+- Frontend Dev nam ownership van design
+- PO gaf feedback op <strong>gebruiksvriendelijkheid</strong> en <strong>toegankelijkheid</strong>, niet pixels
+- Snel (15 minuten discussie), goedkoop (schets vs volledige implementatie)
+- Team kan nu bouwen met vertrouwen</p>
+<hr />
+<h3 id="stap-4-tijdens-ontwikkeling">Stap 4: Tijdens Ontwikkeling</h3>
+<p><strong>Frontend Developer bouwt pagina, maakt design keuzes:</strong></p>
+<ul>
+<li>Kiest Material UI date picker component</li>
+<li>Gebruikt team's kleurenschema (blauw #0066CC voor primary buttons)</li>
+<li>Maakt responsive layout (breakpoint op 768px voor mobile)</li>
+<li>Voegt client-side validatie toe (einddatum &gt; startdatum, datums niet in verleden)</li>
+<li>Implementeert disabled state voor submit button tijdens verzenden</li>
+<li>Voegt loading spinner toe tijdens API call</li>
+</ul>
+<p><strong>Backend Developer bouwt API:</strong></p>
+<ul>
+<li><code>POST /api/leave-requests</code> endpoint</li>
+<li>Valideert datums en business rules server-side</li>
+<li>Implementeert duplicaat detectie (zelfde datums binnen 1 minuut)</li>
+<li>Stuurt email via TransIP SMTP naar gebruiker en manager</li>
+<li>Slaat op in database met status 'pending'</li>
+<li>Implementeert GDPR logging (wie heeft toegang tot data)</li>
+</ul>
+<p><strong>Product Owner rol tijdens ontwikkeling:</strong></p>
+<p>✅ <strong>Product Owner DOET:</strong>
+- Beschikbaar blijven voor vragen over requirements
+- Beantwoorden van clarificatie vragen binnen 24 uur
+- Aanwezig zijn bij Daily Standups (of bereikbaar via Teams)</p>
+<p>❌ <strong>Product Owner DOET NIET:</strong>
+- Meekijken over schouder van developers
+- Code reviews doen
+- Design details dicteren
+- Technische beslissingen maken</p>
+<p><strong>Voorbeeld vraag tijdens ontwikkeling:</strong></p>
+<blockquote>
+<p><strong>Backend Dev (via Teams):</strong> "PO, als gebruiker dubbele aanvraag probeert (zelfde datums binnen 1 minuut), moet ik oude aanvraag overschrijven of nieuwe weigeren?"</p>
+<p><strong>PO:</strong> "Nieuwe weigeren. Toon foutmelding: 'Je hebt al een aanvraag voor deze datums ingediend. Wacht 1 minuut en probeer opnieuw.' Dit voorkomt dat gebruiker per ongeluk oude aanvraag overschrijft."</p>
+<p><strong>Backend Dev:</strong> "Clear, thanks!"</p>
+</blockquote>
+<hr />
+<h3 id="stap-5-testing-feedback">Stap 5: Testing &amp; Feedback</h3>
+<p><strong>Developer markeert story "Ready for Testing" in Jira.</strong></p>
+<p><strong>Tester test eerst (functioneel):</strong></p>
+<ul>
+<li>✅ Kan datums selecteren → Werkt</li>
+<li>✅ Kan type verlof kiezen → Werkt</li>
+<li>✅ Validatie: einddatum voor startdatum → Toont fout ✅</li>
+<li>✅ Validatie: datum in verleden → Toont fout ✅</li>
+<li>✅ Bevestigingsscherm toont correcte details → Werkt</li>
+<li>✅ Email ontvangen → Werkt</li>
+<li>✅ Aanvraag in geschiedenis lijst → Werkt</li>
+<li>✅ Duplicaat detectie → Werkt</li>
+</ul>
+<p><strong>Tester geeft UX feedback:</strong></p>
+<blockquote>
+<p><strong>Tester → PO (via Teams):</strong>
+"Story is functioneel correct, maar één UX issue: Foutmelding bij ongeldige datum is 'Invalid date range'. Voor gebruiker is dit te technisch. Kunnen we dit aanpassen naar 'Einddatum moet na startdatum liggen'?"</p>
+<p><strong>PO:</strong> "Goed punt! Dit staat in acceptance criteria ('duidelijke foutmelding wat er fout is'). Kan dit aangepast worden?"</p>
+<p><strong>Frontend Dev:</strong> "Sure, ik pas foutmeldingen aan naar duidelijke Nederlands."</p>
+</blockquote>
+<p><strong>Tester hertest → ✅ Alle acceptance criteria voldaan</strong></p>
+<p><strong>Product Owner test vanuit gebruikersperspectief:</strong></p>
+<p><strong>PO test happy path:</strong>
+- ✅ Kan ik verlof aanvragen? → Werkt intuïtief
+- ✅ Is het duidelijk wat ik moet doen? → Ja, helder
+- ✅ Zie ik bevestiging? → Ja, duidelijk
+- ✅ Kan ik mijn aanvragen terugzien? → Ja, overzichtelijk</p>
+<p><strong>PO test edge cases:</strong>
+- ✅ Wat als ik geen reden invul? → Werkt, optioneel veld
+- ✅ Wat als ik probeer te versturen met lege velden? → Duidelijke validatie</p>
+<p><strong>PO geeft finale UX feedback:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Één klein puntje: In geschiedenis lijst, status is duidelijk, maar kan manager naam erbij? Zodat gebruiker weet bij wie aanvraag ligt? Of is dat te veel informatie?"</p>
+<p><strong>Frontend Dev:</strong> "We hebben manager info niet in de huidige API response. Als dit belangrijk is, moet Backend Dev dat toevoegen, wat extra werk is."</p>
+<p><strong>PO:</strong> "Laat maar voor nu. Nice to have, maar niet kritiek. Story is goed genoeg. Ik accepteer."</p>
+</blockquote>
+<p><strong>Product Owner accepteert story als:</strong>
+- ✅ Alle acceptance criteria voldaan
+- ✅ Definition of Done gehaald (tests, code review, deployed)
+- ✅ UX is goed genoeg (niet perfect, maar bruikbaar en duidelijk)
+- ✅ GDPR requirements gevalideerd</p>
+<p><strong>Story wordt gemarkeerd als Done.</strong></p>
+<hr />
+<h2 id="veel-voorkomende-problemen-oplossingen-sprint-2">Veel Voorkomende Problemen &amp; Oplossingen (Sprint 2+)</h2>
+<h3 id="probleem-1-product-owner-specificeert-design-details">Probleem 1: Product Owner Specificeert Design Details</h3>
+<p><strong>Symptoom:</strong></p>
+<p>Product Owner schrijft in acceptance criteria:</p>
+<div class="highlight"><pre><span></span><code>❌ FOUT:
+- [ ] Submit knop moet 150px breed zijn, blauw (#0066CC), rechtsonder geplaatst
+- [ ] Formulier moet 400px breed zijn, gecentreerd op pagina
+- [ ] Font moet Roboto 16px zijn
+- [ ] Margins tussen velden: 20px
+</code></pre></div>
+<p><strong>Waarom dit fout is:</strong></p>
+<ul>
+<li>PO rolt in Frontend Developer rol</li>
+<li>Team kan niet eigen design beslissingen maken</li>
+<li>Verspilt PO tijd aan details die niet bijdragen aan waarde</li>
+<li>Moeilijk te onderhouden (wat als team ander design system kiest?)</li>
+<li>Beperkt creativiteit en expertise van Frontend Developer</li>
+</ul>
+<p><strong>Oplossing:</strong></p>
+<p><strong>Product Owner herschrijft acceptance criteria:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ GOED:
+- [ ] Formulier is duidelijk en overzichtelijk - gebruiker begrijpt direct wat te doen
+- [ ] Submit actie is prominent aanwezig - gebruiker vindt deze gemakkelijk
+- [ ] Visuele hiërarchie: belangrijkste elementen (datums, type) zijn meest opvallend
+- [ ] Consistentie met rest van applicatie (zelfde look &amp; feel)
+</code></pre></div>
+<p><strong>Frontend Developer maakt design beslissingen:</strong>
+- Kiest afmetingen, kleuren, fonts die passen bij design system
+- Implementeert responsive layout
+- Zorgt voor toegankelijkheid</p>
+<p><strong>PO geeft feedback op gebruiksvriendelijkheid, niet pixels.</strong></p>
+<hr />
+<h3 id="probleem-2-niemand-neemt-design-verantwoordelijkheid">Probleem 2: Niemand Neemt Design Verantwoordelijkheid</h3>
+<p><strong>Symptoom:</strong></p>
+<p>Team vraagt constant in Daily Standup:</p>
+<blockquote>
+<p><strong>Developer:</strong> "Hoe moet deze pagina eruitzien? Waar moet ik de knop plaatsen?"</p>
+<p><strong>PO:</strong> "Weet ik niet, jullie beslissen."</p>
+<p><strong>Developer:</strong> "Maar jij bent PO, jij moet het weten!"</p>
+<p><strong>PO:</strong> "Ik zeg alleen wat het moet doen, niet hoe het eruitziet."</p>
+<p><strong>Developer:</strong> "Maar dan maak ik iets en jij vindt het niet goed..."</p>
+</blockquote>
+<p><em>[Deadlock - niemand neemt ownership]</em></p>
+<p><strong>Waarom dit fout is:</strong></p>
+<ul>
+<li>Onduidelijke rol grenzen</li>
+<li>Niemand neemt ownership van design</li>
+<li>Team is bang om foute beslissing te maken</li>
+<li>Verspilt tijd in discussies</li>
+<li>Story's komen niet af</li>
+</ul>
+<p><strong>Oplossing:</strong></p>
+<p><strong>Scrum Master faciliteert rol verduidelijking:</strong></p>
+<blockquote>
+<p><strong>Scrum Master (in Refinement of Standup):</strong></p>
+<p>"Ik zie dat we vastlopen op wie design beslissingen maakt. Laten we dit verduidelijken:</p>
+<p><strong>Product Owner:</strong> Jij specificeert WAT de pagina moet doen (functionaliteit) en WAAROM (waarde voor gebruiker). Je schrijft acceptance criteria over functionaliteit, niet design.</p>
+<p><strong>Frontend Developer:</strong> Jij maakt design beslissingen - layout, kleuren, componenten. Jij bent de expert.</p>
+<p><strong>Proces vanaf nu:</strong>
+1. PO schrijft functionele acceptance criteria
+2. Frontend Dev maakt wireframe/schets
+3. Frontend Dev laat schets zien aan PO (5-10 min review)
+4. PO geeft feedback op gebruiksvriendelijkheid: Is het logisch? Duidelijk? Intuïtief?
+5. Frontend Dev implementeert
+6. PO test en accepteert als functionaliteit werkt en UX goed genoeg is</p>
+<p><strong>Akkoord?"</strong></p>
+</blockquote>
+<p><strong>Team stemt in.</strong></p>
+<p><strong>Vanaf nu in Sprint 2:</strong></p>
+<ul>
+<li>Frontend Dev maakt wireframes VOOR implementatie</li>
+<li>PO bekijkt en geeft feedback binnen 24 uur</li>
+<li>Frontend Dev implementeert met vertrouwen</li>
+<li>Geen endloze discussies over "hoe moet het eruitzien"</li>
+</ul>
+<hr />
+<h3 id="probleem-3-te-vage-user-stories">Probleem 3: Te Vage User Stories</h3>
+<p><strong>Symptoom:</strong></p>
+<div class="highlight"><pre><span></span><code>❌ VAGE STORY:
+
+USER STORY: Gebruiker kan verlof aanvragen
+
+Acceptance Criteria:
+- [ ] Gebruiker kan aanvraag indienen
+- [ ] Aanvraag wordt opgeslagen
+
+Klaar.
+</code></pre></div>
+<p><strong>Waarom dit fout is:</strong></p>
+<ul>
+<li>Onduidelijk WAT precies nodig is</li>
+<li>Welke velden? Welke validaties? Wat ziet gebruiker?</li>
+<li>Team moet gissen → veel vragen → vertraging</li>
+<li>Veel rework: "Oh ik dacht iets anders"</li>
+<li>Testing is onduidelijk: wat is "correct"?</li>
+</ul>
+<p><strong>Oplossing:</strong></p>
+<p><strong>Product Owner schrijft specifieke acceptance criteria:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ SPECIFIEKE STORY:
+
+USER STORY: Medewerker kan verlofaanvraag indienen
+
+Als een medewerker
+Wil ik een verlofaanvraag kunnen indienen via een webformulier
+Zodat ik verlof kan aanvragen zonder emails te sturen naar HR/manager
+
+Acceptance Criteria - Functionaliteit:
+- [ ] Formulier bevat verplichte velden: startdatum, einddatum, type verlof
+- [ ] Formulier bevat optioneel veld: reden (max 500 karakters)
+- [ ] Type verlof opties: Vakantie, Ziekte, Onbetaald, Verlof zonder behoud van loon, Overig
+
+Acceptance Criteria - Validaties:
+- [ ] Einddatum moet minimaal 1 dag na startdatum liggen
+- [ ] Startdatum en einddatum mogen niet in het verleden liggen
+- [ ] Maximale aanvraagperiode is 30 dagen (31 dagen = fout)
+- [ ] Alle verplichte velden moeten ingevuld zijn voor versturen mogelijk is
+- [ ] Foutmeldingen zijn duidelijk en in begrijpelijk Nederlands (niet technische codes)
+
+Acceptance Criteria - Na Succesvol Versturen:
+- [ ] Gebruiker ziet bevestigingsscherm met volgende info:
+  - Ingediende datums
+  - Type verlof
+  - Reden (als ingevuld)
+  - Status: &quot;In behandeling&quot;
+  - Bericht: &quot;Je aanvraag is verstuurd naar [Manager Naam]&quot;
+- [ ] Gebruiker ontvangt email bevestiging met aanvraag details
+- [ ] Manager ontvangt email notificatie over nieuwe aanvraag
+
+Acceptance Criteria - Aanvraag Geschiedenis:
+- [ ] Aanvraag verschijnt in &quot;Mijn Aanvragen&quot; sectie
+- [ ] Getoond per aanvraag: datums, type, status, ingediend op
+- [ ] Status mogelijkheden: In behandeling, Goedgekeurd, Afgekeurd
+
+Acceptance Criteria - Error Handling:
+- [ ] Als API call faalt, ziet gebruiker: &quot;Er ging iets fout. Probeer later opnieuw.&quot;
+- [ ] Als duplicaat detectie triggert: &quot;Je hebt al een aanvraag voor deze datums. Wacht 1 minuut.&quot;
+- [ ] Gebruiker verliest GEEN data bij foutmelding (velden blijven gevuld)
+
+GDPR Overwegingen:
+- Persoonlijke data: naam, email, verlof datums, reden voor verlof
+- Juridische basis: Arbeidscontract (noodzakelijk voor uitvoering arbeidsovereenkomst)
+- Privacy by design:
+  - Alleen medewerker zelf en hun direct manager kunnen aanvraag zien
+  - Reden voor verlof is optioneel (gebruiker bepaalt of ze dit delen)
+  - Aanvraag data wordt niet gedeeld met andere afdelingen zonder toestemming
+- Data retentie: Verlof aanvragen bewaren voor 7 jaar (fiscale bewaarplicht)
+
+Dependencies:
+- Vereist: User authentication (gebruiker moet ingelogd zijn)
+- Vereist: Manager relatie in database (wie is manager van gebruiker?)
+- Vereist: TransIP SMTP configuratie voor email verzending
+
+Out of Scope (voor latere stories):
+- Manager kan aanvraag goedkeuren/afkeuren (aparte story)
+- Notificaties bij status wijziging (aparte story)
+- Aanvraag bewerken/annuleren (aparte story)
+- Verlof tegoed berekening (aparte story)
+
+Prioriteit: Hoog (kernfunctionaliteit applicatie)
+Schatting: [Team schat tijdens refinement]
+</code></pre></div>
+<p><strong>WAT dit oplost:</strong></p>
+<ul>
+<li>Team weet exact wat te bouwen</li>
+<li>Minder vragen tijdens sprint</li>
+<li>Tester weet precies wat te valideren</li>
+<li>Minder rework</li>
+<li>Duidelijke scope (wat WEL en NIET in deze story)</li>
+</ul>
+<p><strong>WAT PO nog steeds NIET specificeert:</strong></p>
+<ul>
+<li>Hoe formulier eruit ziet</li>
+<li>Kleuren, fonts, spacing</li>
+<li>Welke components gebruikt worden</li>
+<li>Technische implementatie</li>
+</ul>
+<p><strong>Team heeft nog steeds volledige ownership over HOE.</strong></p>
+<hr />
+<h3 id="probleem-4-product-owner-geeft-tegenstrijdige-feedback">Probleem 4: Product Owner Geeft Tegenstrijdige Feedback</h3>
+<p><strong>Symptoom:</strong></p>
+<p><strong>In Refinement (week 1):</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Maak het simpel en minimalistisch. Geen onnodige velden."</p>
+</blockquote>
+<p><strong>In Sprint Review (week 2):</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Waarom staat er geen veld voor 'aanvraag prioriteit'? Dat moet erbij!"</p>
+</blockquote>
+<p><strong>Developer:</strong></p>
+<blockquote>
+<p>"Maar je zei simpel en minimalistisch? En het stond niet in acceptance criteria..."</p>
+</blockquote>
+<p><strong>PO:</strong></p>
+<blockquote>
+<p>"Maar het is toch logisch dat prioriteit erbij moet?"</p>
+</blockquote>
+<p><strong>Team:</strong></p>
+<blockquote>
+<p><em>[Frustratie - wat wil PO nou eigenlijk?]</em></p>
+</blockquote>
+<p><strong>Waarom dit fout is:</strong></p>
+<ul>
+<li>PO wijzigt requirements NADAT team gebouwd heeft</li>
+<li>Team gefrustreerd: "We kunnen nooit goed doen"</li>
+<li>Verspilt tijd aan rework</li>
+<li>Velocity onvoorspelbaar</li>
+</ul>
+<p><strong>Oplossing:</strong></p>
+<p><strong>Product Owner praktijken:</strong></p>
+<p><strong>1. Schrijf volledige acceptance criteria VOOR sprint:</strong></p>
+<p>Als PO iets belangrijk vindt, moet het in acceptance criteria staan VOOR Sprint Planning.</p>
+<p><strong>2. Onderscheid "must have" vs "nice to have":</strong></p>
+<div class="highlight"><pre><span></span><code>Acceptance Criteria (Must Have):
+- [ ] Veld X, Y, Z aanwezig
+- [ ] Validatie A, B, C werkt
+
+Nice to Have (niet in deze sprint):
+- Veld voor prioriteit (toevoegen in volgende sprint als waardevol)
+- Automatische manager suggestie
+</code></pre></div>
+<p><strong>3. Wijzigingen = nieuwe story:</strong></p>
+<p>Als PO tijdens Sprint Review iets mist dat niet in acceptance criteria stond:</p>
+<blockquote>
+<p><strong>PO:</strong> "Ik zie dat er geen prioriteit veld is. Dit is waardevol - ik maak een nieuwe story voor volgende sprint om dit toe te voegen. Deze story voldoet aan de acceptance criteria die we afspraken, dus ik accepteer hem."</p>
+</blockquote>
+<p><strong>NIET:</strong></p>
+<blockquote>
+<p>"Dit moet erbij, pas het aan!" (scope creep)</p>
+</blockquote>
+<p><strong>4. Verantwoordelijkheid nemen:</strong></p>
+<p>Als PO iets vergat te specificeren:</p>
+<blockquote>
+<p><strong>PO:</strong> "Sorry, ik had prioriteit veld moeten toevoegen aan acceptance criteria. Mijn fout. Dit neem ik mee voor volgende story."</p>
+</blockquote>
+<p><strong>NIET:</strong></p>
+<blockquote>
+<p>"Jullie hadden moeten vragen of dit erbij moest!" (blame shifting)</p>
+</blockquote>
+<hr />
+<h2 id="acties-voor-itnl02-team-sprint-2-en-verder">Acties voor ITNL02 Team (Sprint 2 en verder)</h2>
+<h3 id="voor-product-owner">Voor Product Owner</h3>
+<p><strong>Onmiddellijk (Voor Sprint 2 Planning):</strong></p>
+<p><strong>1. Verduidelijk rollen met team (15 minuten in Daily Standup of kort overleg):</strong></p>
+<blockquote>
+<p><strong>PO aan team:</strong></p>
+<p>"Ik wil iets verduidelijken over mijn rol, relevant voor Sprint 2 en verder.</p>
+<p><strong>Mijn rol:</strong>
+- Ik specificeer <strong>WAT</strong> pagina's moeten doen (functionaliteit, data, business rules, GDPR)
+- Ik specificeer <strong>WAAROM</strong> (waarde voor gebruiker, business rationale)
+- Ik schrijf acceptance criteria die functionaliteit beschrijven</p>
+<p><strong>Mijn rol is NIET:</strong>
+- Bepalen <strong>HOE</strong> dingen eruitzien (kleuren, layout, fonts, componenten)
+- Technische implementatie beslissingen (API endpoints, database schema, code)</p>
+<p><strong>Jullie rol (Frontend/Backend/Tester):</strong>
+- Frontend: Jullie maken design beslissingen - layout, styling, components
+- Backend: Jullie maken technische beslissingen - API design, database, architectuur
+- Tester: Jullie valideren functionaliteit en geven UX feedback</p>
+<p><strong>Nieuw proces vanaf Sprint 2:</strong>
+1. Ik schrijf functionele acceptance criteria (WAT moet werken)
+2. Jullie maken wireframe/schets voor complexe pagina's (optioneel maar geadviseerd)
+3. Jullie laten me schets zien (5-10 min review)
+4. Ik geef feedback op gebruiksvriendelijkheid: Is het logisch? Duidelijk? Intuïtief?
+5. Jullie implementeren met vertrouwen
+6. Ik test en accepteer als functionaliteit correct is en UX goed genoeg</p>
+<p><strong>Verwachtingen:</strong>
+- Van mij: Heldere acceptance criteria, beschikbaar voor vragen, snelle feedback op wireframes
+- Van jullie: Neem ownership van design/techniek, vraag als iets functioneel onduidelijk is</p>
+<p>Vragen? Onduidelijkheden?"</p>
+</blockquote>
+<p><strong>2. Review alle Sprint 2 stories:</strong></p>
+<p>Ga door alle stories voor Sprint 2 en check:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zijn acceptance criteria functioneel, niet design-specifiek?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Is duidelijk WAT moet werken, niet HOE het eruitziet?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zijn validaties en business rules gespecificeerd?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zijn GDPR overwegingen gedocumenteerd?</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Is out of scope duidelijk (wat NIET in deze story)?</li>
+</ul>
+<p><strong>Herschrijf waar nodig:</strong></p>
+<div class="highlight"><pre><span></span><code>❌ Voor Sprint 2, verwijder:
+&quot;Knop moet rechts staan&quot;
+&quot;Gebruik blauw kleurenschema&quot;
+&quot;Tabel moet 600px breed zijn&quot;
+
+✅ Voor Sprint 2, behoud/voeg toe:
+&quot;Gebruiker moet actie kunnen annuleren&quot;
+&quot;Foutmeldingen in duidelijk Nederlands&quot;
+&quot;Status moet zichtbaar zijn&quot;
+&quot;Validatie: veld X moet formaat Y hebben&quot;
+</code></pre></div>
+<p><strong>3. Communiceer verwachtingen over wireframes:</strong></p>
+<blockquote>
+<p><strong>PO aan Frontend Developer(s):</strong></p>
+<p>"Voor complexe pagina's (nieuw formulier, dashboard, etc.), kan je een wireframe maken voor je gaat bouwen? Hoeft niet fancy - simpele schets, Excalidraw, of beschrijving is genoeg.</p>
+<p>Ik review binnen 24 uur en geef feedback op:
+- Is layout logisch voor gebruikers?
+- Zijn belangrijke dingen prominent genoeg?
+- Missen we iets functioneels?</p>
+<p>Dit bespaart ons allebei tijd - beter om op schets fase te valideren dan na volledige implementatie.</p>
+<p>Akkoord?"</p>
+</blockquote>
+<hr />
+<h3 id="voor-frontend-developers">Voor Frontend Developer(s)</h3>
+<p><strong>Vanaf Sprint 2:</strong></p>
+<p><strong>1. Neem ownership van design beslissingen:</strong></p>
+<ul>
+<li>Je bepaalt: layout, kleuren, fonts, components, responsive breakpoints</li>
+<li>Je vraagt PO NIET: "Welke kleur moet knop zijn?" of "Waar moet dit staan?"</li>
+<li>Je vraagt PO WEL: "Is deze layout logisch voor gebruikers?" (na wireframe)</li>
+</ul>
+<p><strong>2. Maak wireframes voor complexe pagina's:</strong></p>
+<p>Voor nieuwe pagina's of complexe features:
+- Maak simpele wireframe VOOR implementatie
+- Laat aan team en PO zien (in Refinement of korte sync)
+- Vraag: "Layout logisch? Iets belangrijks dat ontbreekt?"
+- Implementeer na feedback</p>
+<p><strong>3. Stel functionele vragen, niet design vragen:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ Goede vragen aan PO:
+&quot;Moet gebruiker kunnen annuleren zonder data te verliezen?&quot;
+&quot;Wat ziet gebruiker als API call faalt?&quot;
+&quot;Welke velden zijn verplicht?&quot;
+&quot;In welke situaties moet validatie triggeren?&quot;
+
+❌ Vermijd vragen aan PO:
+&quot;Welke kleur voor submit button?&quot;
+&quot;Moet formulier links of rechts?&quot;
+&quot;Welke font size?&quot;
+&quot;Hoeveel padding tussen elementen?&quot;
+</code></pre></div>
+<p><strong>4. Implementeer met design system consistentie:</strong></p>
+<ul>
+<li>Gebruik zelfde components als rest van applicatie</li>
+<li>Volg bestaande kleurenschema en styling patterns</li>
+<li>Zorg voor toegankelijkheid (ARIA labels, keyboard navigatie)</li>
+<li>Test responsive design</li>
+</ul>
+<hr />
+<h3 id="voor-backend-developers">Voor Backend Developer(s)</h3>
+<p><strong>Vanaf Sprint 2:</strong></p>
+<p><strong>1. Vraag PO naar business logic, niet implementatie:</strong></p>
+<div class="highlight"><pre><span></span><code>✅ Goede vragen aan PO:
+&quot;Welke validaties moeten server-side gecheckt worden?&quot;
+&quot;Wat gebeurt er als gebruiker geen toegang heeft tot deze data?&quot;
+&quot;Welke GDPR regels gelden voor deze feature?&quot;
+&quot;Wie mag deze data zien/wijzigen?&quot;
+
+❌ Vermijd vragen aan PO:
+&quot;Welke database tabel moeten we gebruiken?&quot;
+&quot;REST of GraphQL?&quot;
+&quot;Welke HTTP status codes?&quot;
+</code></pre></div>
+<p><strong>2. Neem ownership van technische beslissingen:</strong></p>
+<ul>
+<li>API design (endpoints, request/response formats)</li>
+<li>Database schema</li>
+<li>Validatie implementatie</li>
+<li>Security maatregelen</li>
+<li>Performance optimalisaties</li>
+</ul>
+<p><strong>3. Communiceer GDPR implementatie naar PO:</strong></p>
+<blockquote>
+<p><strong>Backend Dev naar PO:</strong>
+"Voor verlofaanvraag feature implementeer ik:
+- Alleen user_id opslaan in request tabel, niet volledige user object (minimale data)
+- Access control: gebruiker kan alleen eigen requests zien
+- Audit log: bijhouden wie wanneer toegang had tot data
+- Retention: automatische cleanup na 7 jaar</p>
+<p>Voldoet dit aan GDPR requirements?"</p>
+<p><strong>PO:</strong> "Klinkt goed! Check met staff/DPO voor zekerheid."</p>
+</blockquote>
+<hr />
+<h3 id="voor-tester">Voor Tester</h3>
+<p><strong>Vanaf Sprint 2:</strong></p>
+<p><strong>1. Test functionaliteit tegen acceptance criteria:</strong></p>
+<ul>
+<li>Valideer dat elk acceptance criterium werkt zoals gespecificeerd</li>
+<li>Test edge cases en error scenarios</li>
+<li>Verifieer GDPR compliance</li>
+</ul>
+<p><strong>2. Geef UX feedback aan PO:</strong></p>
+<p>Als je tijdens testen UX issues ziet:</p>
+<blockquote>
+<p><strong>Tester naar PO:</strong>
+"Functionaliteit werkt, maar foutmelding is onduidelijk. Gebruiker begrijpt niet wat fout is. Suggestie: verander 'Error 400' naar 'Einddatum moet na startdatum liggen'."</p>
+<p><strong>PO:</strong> "Goed punt, dit valt onder acceptance criterium 'duidelijke foutmeldingen'. Kan dit aangepast worden?"</p>
+</blockquote>
+<p><strong>3. Valideer toegankelijkheid:</strong></p>
+<p>Test of pagina:
+- Werkt met keyboard navigatie (tab, enter, esc)
+- Screen reader compatible is (ARIA labels)
+- Kleurcontrast voldoende is (colorblind toegankelijk)</p>
+<hr />
+<h3 id="voor-scrum-master">Voor Scrum Master</h3>
+<p><strong>Vanaf Sprint 2:</strong></p>
+<p><strong>1. Faciliteer rol verduidelijking als nodig:</strong></p>
+<p>Als je ziet dat team/PO discussiëren over "wie beslist wat":
+- Verwijs naar dit document
+- Faciliteer kort gesprek (10-15 min) om grenzen te verduidelijken
+- Help team tot afspraken komen</p>
+<p><strong>2. Bewaakt proces:</strong></p>
+<ul>
+<li>Zorgt dat PO acceptance criteria schrijft VOOR Sprint Planning</li>
+<li>Zorgt dat team tijd krijgt voor wireframes (if needed)</li>
+<li>Zorgt dat feedback cycli snel gaan (PO antwoord binnen 24u)</li>
+</ul>
+<p><strong>3. Signaleer anti-patronen:</strong></p>
+<p>Als je ziet dat:
+- PO design details specificeert → "PO, focus op WAT, niet HOE"
+- Team niet durft design beslissingen te maken → "Team, jullie zijn experts, maak voorstel"
+- Veel rework door onduidelijke requirements → "PO, kunnen acceptance criteria specifieker?"</p>
+<hr />
+<h2 id="sprint-2-planning-checklist">Sprint 2 Planning Checklist</h2>
+<h3 id="voor-product-owner-voor-planning">Voor Product Owner (Voor Planning):</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Alle Sprint 2 stories hebben functionele acceptance criteria (WAT, niet HOE)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> GDPR overwegingen gedocumenteerd waar relevant</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Out of scope expliciet vermeld per story</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Business rules en validaties gespecificeerd</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rollen en verwachtingen gecommuniceerd aan team</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Commitment: beschikbaar voor vragen, wireframe feedback binnen 24u</li>
+</ul>
+<h3 id="voor-frontend-developer-in-planning">Voor Frontend Developer (In Planning):</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Begrijp dat je ownership hebt over design beslissingen</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Plan tijd voor wireframes bij complexe pagina's</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Commitment: laat wireframes zien voor implementatie (bij complexe features)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vraag PO verduidelijking over functionele requirements (niet design)</li>
+</ul>
+<h3 id="voor-backend-developer-in-planning">Voor Backend Developer (In Planning):</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Begrijp business rules en validaties uit acceptance criteria</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identificeer GDPR vereisten uit stories</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Plan API design en database changes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vraag PO verduidelijking over business logic (niet technische implementatie)</li>
+</ul>
+<h3 id="voor-tester-in-planning">Voor Tester (In Planning):</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Begrijp acceptance criteria - wat moet getest worden</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identificeer edge cases die niet expliciet vermeld zijn</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Plan test scenarios (happy path, sad path, edge cases)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Commitment: geef UX feedback tijdens testing</li>
+</ul>
+<h3 id="voor-scrum-master-in-planning">Voor Scrum Master (In Planning):</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Faciliteer rol verduidelijking als nodig</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zorg dat team begrijpt WAT vs HOE scheiding</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Check of acceptance criteria specifiek genoeg zijn</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zorg dat team commitment maakt over wireframes/feedback proces</li>
+</ul>
+<hr />
+<h2 id="voorbeeld-dialogen-sprint-2-en-verder">Voorbeeld Dialogen (Sprint 2 en verder)</h2>
+<h3 id="voorbeeld-1-functionele-vraag-goed">Voorbeeld 1: Functionele Vraag (GOED)</h3>
+<p><strong>Context:</strong> Developer werkt aan verlofaanvraag pagina</p>
+<blockquote>
+<p><strong>Developer (Teams):</strong> "PO, als gebruiker een aanvraag indient en de API geeft error 500 (server probleem), wat moet gebruiker zien? Alleen 'Er ging iets fout' of meer details?"</p>
+<p><strong>PO:</strong> "Goede vraag. Toon: 'Er ging iets fout bij het versturen van je aanvraag. Probeer het over een paar minuten opnieuw. Als het probleem blijft, neem contact op met IT support.'</p>
+<p>Belangrijkste: gebruiker begrijpt dat het niet hun fout is, en weet wat te doen. Specifieke technische error details (500, API endpoint, etc.) niet tonen aan gebruiker."</p>
+<p><strong>Developer:</strong> "Clear, thanks!"</p>
+</blockquote>
+<p><strong>Waarom goed:</strong>
+- Developer vraagt naar GEDRAG (wat moet gebruiker zien)
+- PO specificeert FUNCTIONALITEIT (welke informatie, welke actie)
+- PO specificeert GEEN design (hoe foutmelding eruit ziet)</p>
+<hr />
+<h3 id="voorbeeld-2-design-vraag-fout-gecorrigeerd">Voorbeeld 2: Design Vraag (FOUT → GECORRIGEERD)</h3>
+<p><strong>Context:</strong> Frontend Developer werkt aan dashboard</p>
+<blockquote>
+<p><strong>Frontend Dev:</strong> "PO, moet het dashboard 2 kolommen of 3 kolommen hebben?"</p>
+</blockquote>
+<p><strong>❌ FOUT PO Antwoord:</strong></p>
+<blockquote>
+<p>"3 kolommen, elk 33% breed, eerste kolom voor statistieken, tweede voor recente aanvragen, derde voor meldingen."</p>
+</blockquote>
+<p><strong>Waarom fout:</strong> PO dicteert layout details</p>
+<p><strong>✅ GOED PO Antwoord:</strong></p>
+<blockquote>
+<p>"Ik heb geen specifieke voorkeur voor aantal kolommen. Belangrijkste is dat gebruiker snel kan zien:
+1. Hun verlof statistieken (hoeveel dagen gebruikt/over)
+2. Status van recente aanvragen
+3. Belangrijke meldingen</p>
+<p>Hoe je dat layout maakt is jouw expertise. Maak wat logisch is, laat me zien, dan geef ik feedback op of het duidelijk genoeg is."</p>
+<p><strong>Frontend Dev:</strong> "Oké, ik maak een 2-kolom layout (statistieken links, aanvragen/meldingen rechts gestacked). Op mobiel alles onder elkaar. Ik laat schets zien voor ik implementeer."</p>
+<p><strong>PO:</strong> "Klinkt goed!"</p>
+</blockquote>
+<p><strong>Waarom goed:</strong>
+- PO specificeert WAT belangrijk is (welke informatie)
+- PO geeft ownership aan Frontend Dev voor HOE (layout)
+- Frontend Dev maakt voorstel
+- PO biedt feedback aan</p>
+<hr />
+<h3 id="voorbeeld-3-wireframe-review-goed">Voorbeeld 3: Wireframe Review (GOED)</h3>
+<p><strong>Context:</strong> Frontend Developer toont wireframe voor aanvraag detail pagina</p>
+<blockquote>
+<p><strong>Frontend Dev:</strong> "Ik heb wireframe voor aanvraag detail pagina. Feedback?"</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>Wireframe:
+┌─────────────────────────────────┐
+│ Verlofaanvraag Details          │
+│                                 │
+│ Status: 🟡 In behandeling       │
+│                                 │
+│ Datums: 01-04 t/m 05-04        │
+│ Type: Vakantie                  │
+│ Reden: Familie bezoek           │
+│                                 │
+│ Ingediend op: 19-03-2026       │
+│ Ingediend bij: Jan Bakker      │
+│                                 │
+│ [Annuleer Aanvraag]            │
+└─────────────────────────────────┘
+</code></pre></div>
+<p><strong>PO Review:</strong></p>
+<blockquote>
+<p><strong>PO:</strong> "Layout is logisch en helder. Paar opmerkingen:</p>
+<p>✅ Goed: Status prominent bovenaan - gebruiker ziet meteen waar aanvraag staat
+✅ Goed: Alle relevante info aanwezig</p>
+<p>💡 Vraag: 'Annuleer Aanvraag' - kunnen we deze alleen tonen als status 'In behandeling' is? Als al goedgekeurd/afgekeurd, heeft annuleren geen zin. Of zie ik dat verkeerd?</p>
+<p>💡 Vraag: Moet er geschiedenis zijn van status wijzigingen? Bijv. 'Goedgekeurd op 20-03 door Jan Bakker'? Of is huidige status voldoende?"</p>
+<p><strong>Frontend Dev:</strong>
+"Goede punten!
+- Annuleer knop: Ja, logisch om alleen bij 'In behandeling' te tonen. Ik voeg die conditie toe.
+- Geschiedenis: Dat staat niet in acceptance criteria voor deze story. Is dat nice-to-have of must-have?"</p>
+<p><strong>PO:</strong> "Nice-to-have. Niet voor deze sprint. Ik maak aparte story 'Aanvraag geschiedenis tonen' voor later. Voor nu is huidige status voldoende."</p>
+<p><strong>Frontend Dev:</strong> "Oké, dan implementeer ik zoals wireframe, met annuleer knop alleen bij 'In behandeling' status."</p>
+<p><strong>PO:</strong> "Perfect, go ahead!"</p>
+</blockquote>
+<p><strong>Waarom goed:</strong>
+- Frontend Dev liet wireframe zien VOOR implementatie
+- PO gaf feedback op FUNCTIONALITEIT en LOGICA, niet pixels
+- PO onderscheidde must-have vs nice-to-have
+- Snelle cyclus (10 min discussie) voorkomt rework later</p>
+<hr />
+<h3 id="voorbeeld-4-acceptance-criteria-onduidelijk-gecorrigeerd">Voorbeeld 4: Acceptance Criteria Onduidelijk (GECORRIGEERD)</h3>
+<p><strong>Context:</strong> Developer leest story in Sprint Planning</p>
+<blockquote>
+<p><strong>Developer:</strong> "Story zegt 'Gebruiker moet aanvraag kunnen annuleren'. Maar wanneer kan dat? Altijd? Ook als al goedgekeurd?"</p>
+<p><strong>PO:</strong> "Ah, goed punt! Ik was niet specifiek genoeg. Laat me acceptance criteria aanvullen:</p>
+<p><strong>UPDATED:</strong>
+- [ ] Gebruiker kan aanvraag annuleren als status 'In behandeling' is
+- [ ] Na annuleren: status wordt 'Geannuleerd'
+- [ ] Na annuleren: manager krijgt email notificatie
+- [ ] Gebruiker kan NIET annuleren als status 'Goedgekeurd' of 'Afgekeurd' is
+- [ ] Als gebruiker probeert te annuleren bij verkeerde status: toon melding 'Je kunt alleen aanvragen in behandeling annuleren'</p>
+<p>Duidelijker?"</p>
+<p><strong>Developer:</strong> "Ja, helder nu. Thanks!"</p>
+</blockquote>
+<p><strong>Waarom goed:</strong>
+- Developer signaleerde onduidelijkheid VOOR bouwen
+- PO nam verantwoordelijkheid en verduidelijkte direct
+- Acceptance criteria aangepast VOOR implementatie (geen rework)</p>
+<hr />
+<h2 id="samenvatting-wat-vs-hoe">Samenvatting: WAT vs HOE</h2>
+<h3 id="product-owner-bepaalt-wat-waarom">✅ Product Owner Bepaalt (WAT &amp; WAAROM):</h3>
+<p><strong>Functionaliteit:</strong>
+- Welke velden, knoppen, acties beschikbaar zijn
+- Welke data getoond/opgeslagen wordt
+- Welke gebruikersrollen welke acties kunnen doen</p>
+<p><strong>Business Rules:</strong>
+- Validaties (welke input is geldig/ongeldig)
+- Workflows (wat gebeurt na actie X)
+- Toegangsrechten (wie mag wat zien/doen)</p>
+<p><strong>User Experience:</strong>
+- Wat intuïtief/logisch moet zijn
+- Welke informatie het belangrijkst is
+- Wat gebruikers frustreert (wat vermijden)</p>
+<p><strong>GDPR:</strong>
+- Welke data persoonlijk is
+- Privacy by design vereisten
+- Toegangscontroles
+- Data retentie regels</p>
+<hr />
+<h3 id="frontend-developer-bepaalt-hoe-design">✅ Frontend Developer Bepaalt (HOE - Design):</h3>
+<p><strong>Visual Design:</strong>
+- Kleuren, fonts, font sizes, spacing
+- Layout (waar elementen staan)
+- Responsive design (mobile/tablet/desktop)
+- Iconography</p>
+<p><strong>UI Components:</strong>
+- Welke components gebruikt worden (buttons, inputs, dropdowns, etc.)
+- Welke UI library (Material UI, Bootstrap, custom)
+- Animaties en transitions
+- Hover/focus states</p>
+<p><strong>Toegankelijkheid:</strong>
+- ARIA labels
+- Keyboard navigatie
+- Kleurcontrast
+- Screen reader compatibility</p>
+<hr />
+<h3 id="backend-developer-bepaalt-hoe-techniek">✅ Backend Developer Bepaalt (HOE - Techniek):</h3>
+<p><strong>API Design:</strong>
+- Endpoints (REST, GraphQL, etc.)
+- Request/response formats
+- HTTP methods en status codes
+- Error response formats</p>
+<p><strong>Database:</strong>
+- Schema (tabellen, velden, relaties)
+- Indexes en optimalisaties
+- Queries</p>
+<p><strong>Implementatie:</strong>
+- Validatie implementatie (server-side)
+- Security maatregelen
+- Caching strategieën
+- Performance optimalisaties</p>
+<hr />
+<h3 id="tester-bepaalt-hoe-kwaliteit">✅ Tester Bepaalt (HOE - Kwaliteit):</h3>
+<p><strong>Test Strategy:</strong>
+- Welke test scenarios (happy path, edge cases, errors)
+- Test data
+- Test volgorde</p>
+<p><strong>Quality Feedback:</strong>
+- UX issues (onduidelijke foutmeldingen, verwarrende flows)
+- Edge cases die niet in acceptance criteria staan
+- Toegankelijkheid problemen
+- GDPR compliance validatie</p>
+<hr />
+<h2 id="sprint-2-succesindicatoren">Sprint 2 Succesindicatoren</h2>
+<p><strong>Je weet dat rolverdeling werkt als:</strong></p>
+<p>✅ <strong>Minder vragen over "hoe moet het eruitzien":</strong>
+- Team maakt design beslissingen zelfstandig
+- PO wordt niet gevraagd over pixels/kleuren</p>
+<p>✅ <strong>Snellere story completion:</strong>
+- Minder rework door onduidelijke requirements
+- Team bouwt met vertrouwen</p>
+<p>✅ <strong>Minder frustratie:</strong>
+- Team voelt ownership over hun expertise gebied
+- PO kan focussen op waarde/prioriteit, niet details</p>
+<p>✅ <strong>Betere kwaliteit:</strong>
+- Acceptance criteria zijn helder VOOR sprint
+- Wireframes valideren UX VOOR implementatie
+- Minder bugs door duidelijke requirements</p>
+<p>✅ <strong>Positieve retrospective feedback:</strong>
+- "Requirements waren duidelijker deze sprint"
+- "Ik kon design beslissingen maken zonder constant te vragen"
+- "PO was beschikbaar voor functionele vragen, maar liet ons HOE bepalen"</p>
+<hr />
+<h2 id="vragen-contact">Vragen &amp; Contact</h2>
+<p><strong>Voor verduidelijking over dit document:</strong>
+- Vraag je Scrum Master
+- Bespreek in Daily Standup of Refinement
+- Neem contact op met staff</p>
+<p><strong>Voor verduidelijking tijdens Sprint 2:</strong>
+- Functionele vragen → Vraag Product Owner
+- Design vragen → Bespreek met Frontend Developer / Team
+- Technische vragen → Bespreek met Backend Developer / Team
+- Proces vragen → Vraag Scrum Master</p>
+<hr />
+<p><strong>Document Einde</strong></p>
+<p><strong>Versie:</strong> 1.0<br />
+<strong>Geldig vanaf:</strong> Sprint 2 (Sprint 1 loopt vandaag af)<br />
+<strong>Review datum:</strong> Na Sprint 2 Retrospective (aanpassen indien nodig)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/WillemMotopp/eap_documentation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
