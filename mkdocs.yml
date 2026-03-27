@@ -1,0 +1,111 @@
+site_name: EAP Documentation
+site_url: https://willemmotopp.github.io/eap-docs/
+repo_url: https://github.com/WillemMotopp/eap_documentation
+repo_name: WillemMotopp/eap_documentation
+docs_dir: docs
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - toc.integrate
+
+plugins:
+  - search:
+      lang: en
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Onboarding Overview: getting-started/onboarding-overview.md
+  - Role Guides:
+      - Product Owner:
+          - Overview: roles/product-owner/overview.md
+          - Tasks: roles/product-owner/tasks.md
+          - Good Practices: roles/product-owner/good-practices.md
+          - Anti-Patterns: roles/product-owner/anti-patterns.md
+          - Challenges: roles/product-owner/challenges.md
+          - Quick Reference: roles/product-owner/quick-reference.md
+      - Scrum Master:
+          - Overview: roles/scrum-master/overview.md
+          - Tasks: roles/scrum-master/tasks.md
+          - Good Practices: roles/scrum-master/good-practices.md
+          - Anti-Patterns: roles/scrum-master/anti-patterns.md
+          - Challenges: roles/scrum-master/challenges.md
+          - Quick Reference: roles/scrum-master/quick-reference.md
+      - Tester/QA:
+          - Overview: roles/tester/overview.md
+          - Tasks: roles/tester/tasks.md
+          - Good Practices: roles/tester/good-practices.md
+          - Anti-Patterns: roles/tester/anti-patterns.md
+          - Challenges: roles/tester/challenges.md
+          - Quick Reference: roles/tester/quick-reference.md
+      - Developer:
+          - Overview: roles/developer/overview.md
+          - Tasks: roles/developer/tasks.md
+          - Good Practices: roles/developer/good-practices.md
+          - Anti-Patterns: roles/developer/anti-patterns.md
+          - Challenges: roles/developer/challenges.md
+          - Quick Reference: roles/developer/quick-reference.md
+      - DevOps Engineer:
+          - Overview: roles/devops/overview.md
+          - Tasks: roles/devops/tasks.md
+          - Good Practices: roles/devops/good-practices.md
+          - Anti-Patterns: roles/devops/anti-patterns.md
+          - Challenges: roles/devops/challenges.md
+          - Quick Reference: roles/devops/quick-reference.md
+  - Scrum Framework:
+      - Sprint Planning: scrum/events/sprint-planning.md
+      - Daily Scrum: scrum/events/daily-scrum.md
+      - Sprint Review: scrum/events/sprint-review.md
+      - Sprint Retrospective: scrum/events/sprint-retrospective.md
+      - Backlog Refinement: scrum/events/backlog-refinement.md
+      - Definition of Ready: scrum/definitions/definition-of-ready.md
+      - Definition of Done: scrum/definitions/definition-of-done.md
+  - Best Practices:
+      - UI/UX Boundaries: practices/ui-ux-boundaries.md
+      - Git Workflow: practices/git-workflow.md
+      - Code Review: practices/code-review.md
+      - Testing Strategy: practices/testing-strategy.md
+  - Infrastructure:
+      - VPS Configuration: infrastructure/vps-configuration.md
+      - Deployment: infrastructure/deployment.md
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/WillemMotopp/eap_documentation

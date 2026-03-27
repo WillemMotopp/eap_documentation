@@ -1,6 +1,6 @@
 # EAP Project Documents - Inventory
 
-**Last Updated:** 2026-01-06 (End of Day)  
+**Last Updated:** 2026-03-26
 **Cohort:** Baseline v1.0 + v1.1 Updates
 
 ---
@@ -28,6 +28,16 @@
 | Definition_of_Done_Template | v1.0 | Interns | Superseded | Original version |
 | **Architecture_Decision_Record_Template** | **v1.0** | **Interns** | **Approved** | **How to write and organize ADRs across repositories** |
 | **EAP_Repository_Structure_Guide** | **v1.0** | **Interns** | **Approved** | **Multi-repo structure, workflows, coordination** |
+
+### 2a. Role Guides (Intern-Facing)
+
+| Document | Version | Audience | Status | Description |
+|----------|---------|----------|--------|-------------|
+| **Role_Guide_Product_Owner** | **v1.0** | **Interns (Product Owner role)** | **Approved** | **Expectations, responsibilities, scenarios, and anti-patterns for the PO role** |
+| **Role_Guide_Tester** | **v1.0** | **Interns (Tester/QA role)** | **Approved** | **Expectations, responsibilities, scenarios, and anti-patterns for the Tester role** |
+| **Role_Guide_ScrumMaster** | **v1.0** | **Interns (Scrum Master role)** | **Approved** | **Expectations, responsibilities, scenarios, and anti-patterns for the Scrum Master role** |
+| **Role_Guide_Developer** | **v1.0** | **Interns (Developer role)** | **Approved** | **Expectations, responsibilities, multi-repo workflow, and anti-patterns for the Developer role** |
+| **Role_Guide_DevOps** | **v1.0** | **Interns (DevOps Engineer role)** | **Approved** | **Expectations, responsibilities, pipeline/VPS ownership, and anti-patterns for the DevOps role** |
 
 ### 3. Staff-Only Execution & Governance
 
@@ -85,6 +95,13 @@ All baseline documents remain **frozen** for this cohort as per Cohort Baseline 
 - ✅ EAP_Repository_Structure_Guide → v1.0 (Added **staff GDPR consultation checklist**)
 
 ### New Documents Created (v1.0+)
+
+**✅ Role Guides:**
+- ✅ Role_Guide_Product_Owner_v1.0 (Role expectations, responsibilities, and anti-patterns)
+- ✅ Role_Guide_Tester_v1.0 (Role expectations, responsibilities, and anti-patterns)
+- ✅ Role_Guide_ScrumMaster_v1.0 (Role expectations, facilitation guide, and anti-patterns)
+- ✅ Role_Guide_Developer_v1.0 (Role expectations, multi-repo workflow, GDPR coding obligations)
+- ✅ Role_Guide_DevOps_v1.0 (Role expectations, pipeline/VPS ownership, anti-patterns)
 
 **✅ Architecture & Development:**
 - ✅ Architecture_Decision_Record_Template_v1.0 (Complete ADR guide with multi-repo conventions)

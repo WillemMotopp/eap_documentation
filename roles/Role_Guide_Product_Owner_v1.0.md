@@ -241,7 +241,7 @@ Use professional judgment as a team. When in doubt, document.
 - [ ] Be available for questions (within 24 hours response)
 - [ ] Clarify acceptance criteria when asked
 - [ ] Make decisions on scope/priorities quickly
-- [ ] Attend Daily Standup (optional but recommended)
+- [ ] Attend Daily Standup (required in EAP, normally optional but recommended)
 - [ ] Review work in progress if team requests
 - [ ] **When team says "story is done," verify it meets Definition of Done before accepting**
 

@@ -1,6 +1,59 @@
 # EAP Project Documents - Version Changelog
 
-**Last Updated:** 2026-01-06
+**Last Updated:** 2026-03-26
+
+---
+
+## New Documents (2026-03-26)
+
+### Role_Guide_ScrumMaster v1.0
+
+**Purpose:** Role guide for trainees assigned the Scrum Master role in EAP.
+
+**Contents:**
+- Role Overview: what SM is/is not, core responsibility
+- Key Responsibilities: facilitation, impediment removal, coaching, protecting team, progress tracking, PO support
+- Concrete Tasks: Sprint 0 day-by-day checklist + per-sprint ceremony checklists
+- Good Practice Scenarios: effective impediment removal, difficult retrospective, protecting team from scope change
+- Anti-Patterns: Absent SM, Micromanaging SM, Yes-Person SM, Process-Police SM
+- Common Challenges & Solutions (4)
+- Quick Reference Checklists + Tips for Success
+
+**Initial version.** Document is frozen at v1.0 for the current cohort.
+
+---
+
+### Role_Guide_Developer v1.0
+
+**Purpose:** Role guide for trainees assigned to backend and/or frontend development in EAP.
+
+**Contents:**
+- Role Overview: what Developer is/is not, core responsibility (how vs. what)
+- Key Responsibilities: feature implementation, API contract workflow (OpenAPI-first), code review, ADR authoring, GDPR coding obligations, CI/CD participation
+- Concrete Tasks: Sprint 0 setup (clone all 4 repos, local env, read OpenAPI spec) + per-sprint checklists
+- Good Practice Scenarios: API contract collaboration, writing and getting ADR accepted, incremental dev with tester feedback
+- Anti-Patterns: Solo Developer, Gold-Plater, "It Works on My Machine", Scope Ignorer
+- Common Challenges & Solutions (4, including GDPR coding checklist)
+- Quick Reference Checklists (Sprint 0, Daily Dev, PR checklist, GDPR coding checklist)
+
+**Initial version.** Document is frozen at v1.0 for the current cohort.
+
+---
+
+### Role_Guide_DevOps v1.0
+
+**Purpose:** Role guide for trainees assigned DevOps/infrastructure responsibilities in EAP.
+
+**Contents:**
+- Role Overview: what DevOps is/is not, core responsibility (pipeline and VPS ownership)
+- Key Responsibilities: CI/CD pipeline ownership, VPS/Nginx/SSL management, secrets management, deployment, monitoring, team documentation
+- Concrete Tasks: Sprint 0 setup (SSH access, pipeline audit, environments, secrets audit, runbook) + per-sprint checklists
+- Good Practice Scenarios: new pipeline step, broken deployment diagnosis, secrets hardening
+- Anti-Patterns: "It Deploys Manually", Secrets in Code, "Deploy and Forget", Overengineered Pipeline
+- Common Challenges & Solutions (4, including SSL renewal, incident response)
+- Quick Reference Checklists (Sprint 0, deployment, Sprint Review prep, security/access)
+
+**Initial version.** Document is frozen at v1.0 for the current cohort.
 
 ---
 
